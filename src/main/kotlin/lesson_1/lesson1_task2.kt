@@ -2,8 +2,8 @@ package lesson_1
 
 fun main() {
 
-    val completedOfOrders: Int = 75
-    val messageUser: String = "Благодарим Вас за заказ"
+    val completedOfOrders = 75
+    val messageUser = "Благодарим Вас за заказ"
     println(completedOfOrders)
     println(messageUser)
 
