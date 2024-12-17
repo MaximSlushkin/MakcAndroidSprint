@@ -3,14 +3,21 @@ package lesson_1
 fun main () {
 
     val year: Int = 1961
-    var takeOfHour: Int = 9
-    var takeOfMinute: Int = 7
+    var hour: Int = 9
+    var minute: Int = 7
 
     println(year)
-    println("0$takeOfHour:0$takeOfMinute")
+    println(hour)
+    println(minute)
 
-    var boardingHour = 10
-    var boardingMinutes = 55
+    hour = 10
+    minute = 55
+    println("10:55")
 
-    print("$boardingHour:$boardingMinutes")
+
+
+
+
+
+
 }
