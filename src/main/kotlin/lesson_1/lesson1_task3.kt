@@ -10,7 +10,7 @@ fun main () {
     println("0$takeOfHour:0$takeOfMinute")
 
     var boardingHour = 10
-    var boardingMinute = 55
+    var boardingMinutes = 55
 
-    print("$boardingHour:$boardingMinute")
+    print("$boardingHour:$boardingMinutes")
 }
