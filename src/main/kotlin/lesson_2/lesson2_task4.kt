@@ -6,10 +6,8 @@ fun main() {
     val ironOre = 11
 
     val buffMultiplier: Double = 0.20
-
     val bonusCrystal = (crystalOre * buffMultiplier).toInt()
     val bonusIron = (ironOre * buffMultiplier).toInt()
-
 
     println("Бонус кристаллической руды: $bonusCrystal")
     println("Бонус железной руды: $bonusIron")
