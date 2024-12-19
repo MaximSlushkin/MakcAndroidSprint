@@ -6,13 +6,13 @@ fun main () {
     val departureMinutes = 39
     val travelMinutes = 457
 
-    val totalDepartureMinutes = departureHours * 60 + departureMinutes
+    val totalDepartureMinutes = departureHours * const + departureMinutes
     val arrivalMinutes = totalDepartureMinutes + travelMinutes
 
-    val arrivalHours = arrivalMinutes / 60
-    val arrivalMinutesRemaining = arrivalMinutes % 60
+    val arrivalHours = arrivalMinutes / const
+    val arrivalMinutesRemaining = arrivalMinutes % const
 
-    println("Время прибытия $arrivalHours:${
-        String.format("%02d", arrivalMinutesRemaining)}")
+    println("Время прибытия: $arrivalHours:$arrivalMinutesRemaining")
 
 }
+val const = 60
