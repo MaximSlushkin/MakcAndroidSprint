@@ -5,7 +5,8 @@ fun main() {
     val crystalOre = 7
     val ironOre = 11
 
-    val buffMultiplier: Double = 0.20
+    var percentageOfProduction = 20
+    var buffMultiplier = percentageOfProduction / 100
     val bonusCrystal = (crystalOre * buffMultiplier).toInt()
     val bonusIron = (ironOre * buffMultiplier).toInt()
 
