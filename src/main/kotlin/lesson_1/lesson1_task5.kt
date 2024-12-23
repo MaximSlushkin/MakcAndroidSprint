@@ -7,10 +7,7 @@ fun main() {
     var totalSeconds: Int = 6480
 
     val hour = totalSeconds / secondsInHour
-    val minute = (6480 % secondsInHour) / secondsInMinute
+    val minute = (totalSeconds % secondsInHour) / secondsInMinute
 
     println("Время проведенное в космосе ${String.format("%02d", hour)}:$minute:00")
-
 }
-
-
