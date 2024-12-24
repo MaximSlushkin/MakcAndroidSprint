@@ -4,13 +4,12 @@ import kotlin.math.pow
 
 fun main() {
 
-    val depositAmount = 70_000.0
-    val baseRate = 16.7 / totalPercentage
-    val depositPeriod = 20
+    var depositAmount = 70_000.0
+    var baseRate = 16.7
+    var depositPeriod = 20
 
-    val finalAmount = depositAmount * (1 + baseRate).pow(depositPeriod)
-
+    val finalAmount = depositAmount * (1 + baseRate / TOTAL_PERCENTAGE).pow(depositPeriod)
     println(String.format("Итоговый размер вклада через 20 лет: %.3f", finalAmount))
 }
 
-const val totalPercentage = 100
+const val TOTAL_PERCENTAGE = 100
