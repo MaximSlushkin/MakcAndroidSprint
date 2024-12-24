@@ -6,11 +6,12 @@ fun main() {
     val ironOre = 11
 
     var percentageOfProduction = 20
-    var buffMultiplier = percentageOfProduction / totalPercentage
+    var buffMultiplier = percentageOfProduction / TOTAL_PERCENTAGE
     val bonusCrystal = (crystalOre * buffMultiplier).toInt()
     val bonusIron = (ironOre * buffMultiplier).toInt()
 
     println("Бонус кристаллической руды: $bonusCrystal")
     println("Бонус железной руды: $bonusIron")
 }
-const val totalPercentage= 100
+
+const val TOTAL_PERCENTAGE = 100
