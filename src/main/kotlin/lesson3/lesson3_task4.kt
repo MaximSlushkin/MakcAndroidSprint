@@ -6,14 +6,14 @@ fun main() {
     var to = "E4"
     var moveNumber = 1
 
-    val moveString = "$from-$to;$moveNumber"
+    var moveString = "$from-$to;$moveNumber"
     println(moveString)
 
     from = "D2"
     to = "D3"
     moveNumber = 2
 
-    val nextMoveString = "$from-$to;$moveNumber"
-    println(nextMoveString)
+   moveString = "$from-$to;$moveNumber"
+    println(moveString)
 
 }
