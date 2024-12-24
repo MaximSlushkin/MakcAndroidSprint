@@ -12,8 +12,7 @@ fun main() {
     from = "D2"
     to = "D3"
     moveNumber = 2
+    moveString = "$from-$to;$moveNumber"
 
-   moveString = "$from-$to;$moveNumber"
     println(moveString)
-
 }
