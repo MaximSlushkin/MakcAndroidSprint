@@ -2,17 +2,17 @@ package org.example.lesson3
 
 fun main() {
 
-    val lastNameAt20 = "Андреева"
-    val firstNameAt20 = "Татьяна"
-    val patronymicAt20 = "Сергеевна"
-    val ageAt20 = 20
+    var lastNameAt20 = "Андреева"
+    var firstNameAt20 = "Татьяна"
+    var patronymicAt20 = "Сергеевна"
+    var ageAt20 = 20
 
     println("$lastNameAt20 $firstNameAt20 $patronymicAt20, $ageAt20")
 
-    val lastNameAt22 = "Сидорова"
-    val firstNameAt22 = "Татьяна"
-    val patronymicAt22 = "Сергеевна"
-    val ageAt22 = 22
+    lastNameAt20 = "Сидорова"
+    firstNameAt20 = "Татьяна"
+    patronymicAt20 = "Сергеевна"
+    ageAt20 = 22
 
-    println("$lastNameAt22 $firstNameAt22 $patronymicAt22, $ageAt22")
+    println("$lastNameAt20 $firstNameAt20 $patronymicAt20, $ageAt20")
 }
