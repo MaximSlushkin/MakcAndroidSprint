@@ -2,18 +2,18 @@ package org.example.lesson3
 
 fun main() {
 
-    val from = "E2"
-    val to = "E4"
-    val moveNumber = 1
+    var from = "E2"
+    var to = "E4"
+    var moveNumber = 1
 
     val moveString = "$from-$to;$moveNumber"
     println(moveString)
 
-    val nextFrom = "D2"
-    val nextTo = "D3"
-    val nextMoveNumber = 2
+    from = "D2"
+    to = "D3"
+    moveNumber = 2
 
-    val nextMoveString = "$nextFrom-$nextTo;$nextMoveNumber"
+    val nextMoveString = "$from-$to;$moveNumber"
     println(nextMoveString)
 
 }
