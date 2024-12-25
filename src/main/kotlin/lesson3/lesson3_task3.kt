@@ -1,6 +1,14 @@
 package org.example.lesson3
 
 fun main() {
+
     val number = 6
-    println((1..9).joinToString("\n") { "$number x $it = ${number * it}" })
+
+    val multiplicationTable = buildString {
+        for (i in 1..9) {
+            append("$number x $i = ${number * i}\n")
+        }
+    }.trim()
+
+    println(multiplicationTable)
 }
