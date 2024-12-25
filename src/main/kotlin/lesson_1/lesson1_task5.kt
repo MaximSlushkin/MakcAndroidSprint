@@ -6,8 +6,6 @@ fun main() {
     val minute = (totalSeconds % secondsInMinAndHour) / secondsInMinAndHour
     val seconds = totalSeconds % secondsInMinAndHour
 
-    println("Время проведенное в космосе: ${String.format("%02d", hour)} : ${String.format("%02d", minute)} : ${String.format("%02d", seconds)}")
+    println("Время проведенное в космосе: ${String.format("%02d:%02d:%02d", hour, minute, seconds)}")
 }
-
 const val secondsInMinAndHour = 60
-//println("Время проведенное в космосе ${String.format("%02d", hour)}:$minute:00")
