@@ -4,13 +4,11 @@ fun main() {
 
     val data = "D2-D4;0"
 
-    val (move, turnNumber) = data.split("-", ";")
+    val partOfTheMove = data.split("-", ";")
 
-    val resaultMoveSplit = move.split("-", ";")
-    println("${resaultMoveSplit::class}")
-
-    val fromSquare = resaultMoveSplit[0]
-    val toSquare = resaultMoveSplit[1]
+    val fromSquare = partOfTheMove[0]
+    val toSquare = partOfTheMove[1]
+    val turnNumber = partOfTheMove[2]
 
     println("Откуда: $fromSquare")
     println("Куда: $toSquare")
