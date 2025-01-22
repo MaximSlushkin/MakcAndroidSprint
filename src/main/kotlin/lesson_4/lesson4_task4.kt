@@ -3,14 +3,14 @@ package org.example.lesson_4
 fun main() {
     val trainingDay = 5
 
-    val isArmsAndAbsWorkout = trainingDay % 2 != 0 // Нечетные дни: руки и пресс
-    val isLegsAndBackWorkout = trainingDay % 2 == 0 // Четные дни: ноги и спина
+    val isLegsAndBackWorkout = trainingDay % 2 == 0
 
     val output = """
-        Упражнения для рук:       $isArmsAndAbsWorkout
-        Упражнения для ног:       ${!isLegsAndBackWorkout}
-        Упражнения для спины:     false
-        Упражнения для пресса:    $isArmsAndAbsWorkout
+        Упражнения для рук:       ${!isLegsAndBackWorkout}
+        Упражнения для пресса:    ${!isLegsAndBackWorkout}
+        Упражнения для ног:       ${isLegsAndBackWorkout}
+        Упражнения для спины:     ${isLegsAndBackWorkout}
+       
     """.trimIndent()
 
     println(output)
