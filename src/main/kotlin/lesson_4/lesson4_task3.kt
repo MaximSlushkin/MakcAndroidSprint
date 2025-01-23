@@ -7,8 +7,8 @@ fun main() {
     val humidityNow: Int = 20
     val currentSeasonNow: String = "зима"
 
-    val favorableConditions = (sunnyWeatherNow && tentOpenNow && humidityNow == 20 && currentSeasonNow == "зима")
-            || (SANNY_WEATHER && TENT_OPEN && HUMADITY == 20 && CURRENT_SEASON != "зима")
+    val favorableConditions =
+        (sunnyWeatherNow == SANNY_WEATHER && tentOpenNow == TENT_OPEN && (humidityNow == HUMADITY) && currentSeasonNow == CURRENT_SEASON)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $favorableConditions")
 
