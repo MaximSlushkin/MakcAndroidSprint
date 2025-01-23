@@ -10,6 +10,5 @@ fun main() {
     }
     println(resaultText)
 }
-
 const val correctResult: Int = 10
 
