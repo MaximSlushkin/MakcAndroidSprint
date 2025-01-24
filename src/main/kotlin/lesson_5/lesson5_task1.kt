@@ -10,5 +10,5 @@ fun main() {
     }
     println(resaultText)
 }
-const val correctResult: Int = 10
 
+const val correctResult: Int = 10
