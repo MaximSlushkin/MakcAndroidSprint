@@ -3,8 +3,8 @@ package org.example.lesson_5
 import kotlin.random.Random
 
 fun main() {
-
-    val winningNumber = List(3) { Random.nextInt(0, 42) }.distinct()
+    var rangeWinNumbers = 0..42
+    val winningNumber = List(3) { Random.nextInt(rangeWinNumbers.first, rangeWinNumbers.last + 1) }.distinct()
     println("Введите три числа от 0 до 42")
 
     val userInputNumbers = mutableListOf<Int>()
