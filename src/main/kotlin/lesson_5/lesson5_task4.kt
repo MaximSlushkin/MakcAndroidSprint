@@ -2,8 +2,8 @@ package org.example.lesson_5
 
 fun main() {
 
-    val userName: String? = "Zaphod"
-    val userPassword: String? = "PanGalactic"
+    val userName = "Zaphod"
+    val userPassword = "PanGalactic"
 
     println(
         """|Внимание, пассажир. Моя обязанность, как обычно, незавидная, - приветствовать вас на борту корабля "Heart of Gold". [вздыхает...] 
@@ -13,14 +13,14 @@ fun main() {
     )
 
     println("Введите Ваш логин")
-    val userInputName = readLine()
+    val userInputName = readln()
 
     if (userInputName != userName) {
         println("Пользователь не найден. Пожайлуйста зарегистрируйтесь")
     }
 
     println("Введите Ваш пароль")
-    val userInputPassword = readLine()
+    val userInputPassword = readln()
 
     if (userPassword == userInputPassword) {
         println(
