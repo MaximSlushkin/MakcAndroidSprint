@@ -1,7 +1,14 @@
 package org.example.lesson_5
 
 fun main() {
-    println("Подтвердите, что вы не бот, решив данный пример: 5 + 5 = ?")
+
+    val number1 = 5
+    val number2 = 5
+
+    val correctResult: Int = number1 + number2
+
+    println("Подтвердите, что вы не бот, решив данный пример: $number1 + $number2 = ?")
+
     val resaultUserInput = readLine()?.toInt()
     val resaultText = if (resaultUserInput == correctResult) {
         "Добро пожаловать!"
