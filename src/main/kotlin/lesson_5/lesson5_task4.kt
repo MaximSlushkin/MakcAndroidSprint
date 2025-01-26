@@ -16,11 +16,13 @@ fun main() {
     val userInputName = readln()
 
     if (userInputName != userName) {
-        println("Пользователь не найден. Пожайлуйста зарегистрируйтесь")
+        println("Пользователь не найден. Пожалуйста зарегистрируйтесь")
+        return
     }
 
     println("Введите Ваш пароль")
     val userInputPassword = readln()
+
 
     if (userPassword == userInputPassword) {
         println(
