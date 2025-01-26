@@ -11,7 +11,7 @@ fun main() {
     println("Введите текущую цену за литр:")
     val fuelPrice = readLine()?.toDoubleOrNull() ?: return
 
-    val totalAmountFuel = (distance * fuelConsumption) / 100
+    val totalAmountFuel = (distance * fuelConsumption) / PER_100_KM
 
     val totalCostFuel = totalAmountFuel * fuelPrice
 
@@ -19,3 +19,5 @@ fun main() {
     println("Итоговая стоимость поездки: ${"%.2f".format(totalCostFuel)}")
 
 }
+
+const val PER_100_KM = 100
