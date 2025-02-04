@@ -1,12 +1,11 @@
 package org.example.lesson_6
 
-import kotlin.random.Random
-
 fun main() {
+
     val totalAttempts = 3
 
-    val number1 = Random.nextInt(1, 10)
-    val number2 = Random.nextInt(1, 10)
+    val number1 = (1..10).random()
+    val number2 = (1..10).random()
 
     for (attempt in 1..totalAttempts) {
 
