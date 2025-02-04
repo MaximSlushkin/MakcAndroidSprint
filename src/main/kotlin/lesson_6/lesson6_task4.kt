@@ -1,10 +1,9 @@
 package org.example.lesson_6
 
-import kotlin.random.Random
 
 fun main() {
 
-    val randomNumber = Random.nextInt(1, 10)
+    val randomNumber = (1..9).random()
     var attempts = 5
 
     println("Угадайте число от 1 до 9. У вас есть $attempts попыток.")
@@ -13,7 +12,7 @@ fun main() {
         print("Введите число: ")
         val userInput = readln().toInt()
 
-        if (userInput < 1 || userInput > 9) {
+        if (userInput < RANGE1 || userInput > RANGE2) {
             println("Пожалуйста, введите число от 1 до 9.")
             continue
         }
@@ -29,3 +28,6 @@ fun main() {
 
     println("Было загадано число $randomNumber.")
 }
+
+const val RANGE1 = 1
+const val RANGE2 = 9
