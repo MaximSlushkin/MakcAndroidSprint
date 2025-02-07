@@ -12,7 +12,7 @@ fun getPasswordLength(): Int {
     do {
         print("Введите длину пароля (минимум 6 символов): ")
         lengthPassword = readln().toInt()
-    } while (lengthPassword < 6)
+    } while (lengthPassword < NUM_OF_CHAR)
     return lengthPassword
 }
 
@@ -35,3 +35,5 @@ fun generatePassword(length: Int): String {
 
     return passwordGenerator.toList().shuffled().joinToString("")
 }
+
+const val NUM_OF_CHAR = 6
