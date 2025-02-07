@@ -1,18 +1,17 @@
 package org.example.lesson_7
 
 fun main() {
+    var numberRange: Int
+    var inputUser: Int
 
     do {
 
-        var numberRange = (1000..9999).random().toLong()
+        numberRange = (1000..9999).random().toInt()
         println("Ваш код авторизации: $numberRange")
 
         println("Введите код, чтобы авторизоваться: ")
-        var inputUser = readln().toLong()
+        inputUser = readln().toInt()
 
-        if (inputUser != numberRange) {
-            println("Неверный код. Попробуйте снова.")
-        }
     } while (inputUser != numberRange)
 
     println("Приветствуем Вас!")
