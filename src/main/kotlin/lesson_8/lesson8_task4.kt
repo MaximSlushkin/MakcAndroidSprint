@@ -8,12 +8,13 @@ fun main() {
     println("Какой ингредиент Вы хотите заменить?")
     val userInput = readln()
 
-    if (arrayOfIngredients.contains(userInput)) {
+    val indexIngredients = arrayOfIngredients.indexOf(userInput)
+
+    if (indexIngredients != -1) {
 
         println("На какой ингредиент вы хотите заменить '$userInput'?")
         val userInput2 = readln()
 
-        val indexIngredients = arrayOfIngredients.indexOf(userInput)
         arrayOfIngredients[indexIngredients] = userInput2
 
         println("Готово! Вы сохранили следующий список: ${arrayOfIngredients.joinToString()}")
