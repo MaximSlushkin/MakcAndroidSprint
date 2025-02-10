@@ -10,7 +10,7 @@ fun main() {
 
     val indexIngredients = arrayOfIngredients.indexOf(userInput)
 
-    if (indexIngredients != -1) {
+    if (indexIngredients != WRONG_RESULT) {
 
         println("На какой ингредиент вы хотите заменить '$userInput'?")
         val userInput2 = readln()
@@ -24,3 +24,5 @@ fun main() {
     }
 
 }
+
+const val WRONG_RESULT = -1
