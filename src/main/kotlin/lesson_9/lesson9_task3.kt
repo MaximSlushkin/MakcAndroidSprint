@@ -7,9 +7,12 @@ fun main() {
     println("Введите количество порций:")
     val userInput = readln().toInt()
 
-    val totalEggs = ingredientsForOmelet[0] * userInput
-    val totalMilk = ingredientsForOmelet[1] * userInput
-    val totalButter = ingredientsForOmelet[2] * userInput
+    val totalIngredients = ingredientsForOmelet.map { it * userInput }
+
+    val totalEggs = totalIngredients[0]
+    val totalMilk = totalIngredients[1]
+    val totalButter = totalIngredients[2]
+
 
     println("На $userInput порций вам понадобится: Яиц – $totalEggs, молока – $totalMilk мл, сливочного масла – $totalButter гр.")
 }
