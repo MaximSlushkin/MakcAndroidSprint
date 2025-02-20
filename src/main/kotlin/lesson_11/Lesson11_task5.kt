@@ -11,15 +11,13 @@ class ForumMessage(
 )
 
 class Forum(
-    val usersList: MutableList<UserForum> = mutableListOf<UserForum>(),
-    val messagesList: MutableList<ForumMessage> = mutableListOf<ForumMessage>(),
-    var userIdCounter: Int = 1,
 ) {
+    val usersList: MutableList<UserForum> = mutableListOf<UserForum>()
+    val messagesList: MutableList<ForumMessage> = mutableListOf<ForumMessage>()
 
-    fun createNewUser(userName: String): UserForum {
-        val newUser = UserForum(userIdCounter++, userName)
+    fun createNewUser(userName: String) {
+        val newUser = UserForum(usersList.size + 1, userName)
         usersList.add(newUser)
-        return newUser
     }
 
     fun createNewMessage(authorId: Int, message: String) {
@@ -44,10 +42,10 @@ fun main() {
     val user1 = forum.createNewUser("Max")
     val user2 = forum.createNewUser("Bogdan")
 
-    forum.createNewMessage(user1.userId, "Привет, Bogdan!")
-    forum.createNewMessage(user2.userId, "Привет Max!");
-    forum.createNewMessage(user1.userId, "Как дела?");
-    forum.createNewMessage(user2.userId, "Всё отлично. Как ты?");
+    forum.createNewMessage(forum.usersList[0].userId, "Привет, Bogdan!")
+    forum.createNewMessage(forum.usersList[1].userId, "Привет Max!");
+    forum.createNewMessage(forum.usersList[0].userId, "Как дела?");
+    forum.createNewMessage(forum.usersList[1].userId, "Всё отлично. Как ты?");
 
     println("Сообщения на форуме:")
     forum.printAllMessage()
