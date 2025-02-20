@@ -3,7 +3,7 @@ package org.example.lesson_11
 class Category(
     val id: Int,
     val nameCategory: String,
-    val recipeList: String,
+    val recipeList: List<String>,
 )
 
 class Recipe(
