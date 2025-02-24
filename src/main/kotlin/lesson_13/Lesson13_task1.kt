@@ -4,6 +4,6 @@ class PhoneDirectories(
 
     var userName: String,
     val numberPhone: Long,
-    val company: String? = null,
+    val company: String?,
 ) {
 }
