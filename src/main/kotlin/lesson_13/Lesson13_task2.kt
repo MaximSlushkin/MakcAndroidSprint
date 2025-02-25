@@ -8,7 +8,7 @@ class PhoneDirectoriesInfo(
 ) {
     fun printContact() {
 
-        println("-Имя: $userName \n-Номер: $numberPhone \n-Компания: $company")
+        println("-Имя: $userName \n-Номер: $numberPhone \n-Компания: ${company ?: "<не указано>"}")
 
     }
 }
@@ -19,9 +19,8 @@ fun main() {
 
         userName = "Ростислав",
         numberPhone = 89123456789,
-        company = "<не указано>"
 
-    )
+        )
     println(contact.printContact())
 
 }
