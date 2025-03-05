@@ -4,15 +4,15 @@ open class Message(
     val id: Int,
     val text: String,
     val author: String,
-    val parentMessageId: Int? = null,
-)
+
+    )
 
 class ChildMessage(
     id: Int,
     text: String,
     author: String,
-    parentId: Int,
-) : Message(id, text, author, parentId)
+    val parentMessageID: Int,
+) : Message(id, text, author)
 
 class Chat {
     private val messages = mutableListOf<Message>()
@@ -32,37 +32,34 @@ class Chat {
 
     fun printChat() {
 
-        val groupedMessages = messages.groupBy { it.parentMessageId }
+        val groupedMessages = messages.groupBy {
+            if (it is ChildMessage) it.parentMessageID else null
+        }
 
-        val parentMessages = groupedMessages[null]
+        val parentMessages = groupedMessages[null] ?: emptyList()
 
-        if (parentMessages != null) {
-            for (message in parentMessages) {
+        for (message in parentMessages) {
+            println("${message.author}: ${message.text}")
 
-                println("${message.author}: ${message.text}")
-
-                val childMessages = groupedMessages[message.id]
-                if (childMessages != null) {
-                    for (childMessage in childMessages) {
-
-                        println("\t${childMessage.author}: ${childMessage.text}")
-                    }
-                }
+            val childMessages = groupedMessages[message.id] ?: emptyList()
+            for (childMessage in childMessages) {
+                println("\t${childMessage.author}: ${childMessage.text}")
             }
         }
     }
 }
 
-fun main() {
-    val chat = Chat()
+    fun main() {
 
-    chat.addMessage("Здравствуйте коллеги!", "Директор")
-    chat.addMessage("Все ли задачи выполнены?", "Зам.Ген.Директора")
+        val chat = Chat()
 
-    chat.addThreadMessage(1, "Здравствуйте, Максим Александрович!", "Аделя")
-    chat.addThreadMessage(1, "Приветствуем Вас!", "Богдан")
-    chat.addThreadMessage(2, "К вечеру всё будет готово", "Дарья.ТимЛид")
-    chat.addThreadMessage(2, "Благодарю за слаженность в работе!", "Директор")
+        chat.addMessage("Здравствуйте коллеги!", "Директор")
+        chat.addMessage("Все ли задачи выполнены?", "Зам.Ген.Директора")
 
-    chat.printChat()
-}
+        chat.addThreadMessage(1, "Здравствуйте, Максим Александрович!", "Аделя")
+        chat.addThreadMessage(1, "Приветствуем Вас!", "Богдан")
+        chat.addThreadMessage(2, "К вечеру всё будет готово", "Дарья.ТимЛид")
+        chat.addThreadMessage(2, "Благодарю за слаженность в работе!", "Директор")
+
+        chat.printChat()
+    }
