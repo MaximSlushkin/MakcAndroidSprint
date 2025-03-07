@@ -5,6 +5,7 @@ class Cube() {
     private val randomNumber: Int = (1..6).random()
     fun cubeValue() {
         println("Выпавшее число: $randomNumber")
+
     }
 }
 
