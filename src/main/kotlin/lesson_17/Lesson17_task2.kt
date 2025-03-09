@@ -1,14 +1,13 @@
 package org.example.lesson_17
 
-class Ship(private val _nameShip: String) {
+class Ship(private var _nameShip: String) {
 
     private var _averageSpeed: Double = 0.0
     private var _homePort: String = ""
 
-    val nameShip: String
-        get() {
-            println("Нельзя изменять имя корабля")
-            return _nameShip
+    var nameShip: String = ""
+        set(value) {
+            println("Имя корабля менять нельзя!")
         }
 
     var averageSpeed: Double
@@ -43,7 +42,5 @@ fun main() {
 
     ship.shipInfo()
 
-    val newShipName = "Конкордия"
-    println("Изменяем имя корабля на: $newShipName")
-    println(ship.nameShip)
+    ship.nameShip = "Конкордия"
 }
