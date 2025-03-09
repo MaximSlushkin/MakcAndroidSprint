@@ -6,7 +6,10 @@ class Ship(private val _nameShip: String) {
     private var _homePort: String = ""
 
     val nameShip: String
-        get() = _nameShip
+        get() {
+            println("Нельзя изменять имя корабля")
+            return _nameShip
+        }
 
     var averageSpeed: Double
         get() = _averageSpeed
@@ -24,12 +27,6 @@ class Ship(private val _nameShip: String) {
         println("Название корабля: $_nameShip \nСредняя скорость: $averageSpeed узла(ов) \nПорт приписки: $homePort")
     }
 
-    fun changeShipName(newShipName: String) {
-
-        if (newShipName != nameShip) {
-            println("Нельзя изменять название корабля")
-        }
-    }
 }
 
 fun main() {
@@ -46,6 +43,7 @@ fun main() {
 
     ship.shipInfo()
 
-    ship.changeShipName("Коста Конкордия")
-
+    val newShipName = "Конкордия"
+    println("Изменяем имя корабля на: $newShipName")
+    println(ship.nameShip)
 }
