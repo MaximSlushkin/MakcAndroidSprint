@@ -1,14 +1,14 @@
 package org.example.lesson_17
 
-class QuizElement(val question: String, private var answer: String) {
+class QuizElement(private val _question: String, private var _answer: String) {
 
-    val questionText: String
-        get() = question
+    val question: String
+        get() = _question
 
-    var answerText: String
-        get() = answer
+    var answer: String
+        get() = _answer
         set(value) {
-            answer = value
+            _answer = value
         }
 }
 
@@ -16,10 +16,10 @@ fun main() {
 
     val qiuz = QuizElement("Первый элемент таблицы Менделеева?", "Водород")
 
-    println("Вопрос: ${qiuz.questionText}")
-    println("Ответ: ${qiuz.answerText}")
+    println("Вопрос: ${qiuz.question}")
+    println("Ответ: ${qiuz.answer}")
 
-    qiuz.answerText = "Алюминий"
-    println("Новый ответ: ${qiuz.answerText}")
+    qiuz.answer = "Алюминий"
+    println("Новый ответ: ${qiuz.answer}")
 
 }
