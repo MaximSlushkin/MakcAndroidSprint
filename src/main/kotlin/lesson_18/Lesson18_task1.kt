@@ -1,29 +1,22 @@
 package org.example.lesson_18
 
-open class Order(val orderNumber: Int) {
-    open fun displayOrderInfo() {
-        println("Информация о заказе: номер $orderNumber.")
-    }
-}
+class Order(private val orderNumber: Int) {
 
-class SingleItemOrder(orderNumber: Int, private val item: String) : Order(orderNumber) {
-    override fun displayOrderInfo() {
-        println("Заказан товар: $item (номер заказа: $orderNumber)")
+    fun displayOrderInfo(item: String) {
+        println("Заказан товар: $item (Номер заказа: $orderNumber)")
     }
-}
 
-class MultipleItemsOrder(orderNumber: Int, private val items: List<String>) : Order(orderNumber) {
-    override fun displayOrderInfo() {
-        println("Заказаны следующие товары: ${items.joinToString(", ")} (номер заказа: $orderNumber)")
+    fun displayOrderInfo(items: List<String>) {
+        println("Заказаны следующие товары: ${items.joinToString(", ")} (Номер заказа: ${orderNumber + 1})")
     }
 }
 
 fun main() {
 
-    val singleItemOrder = SingleItemOrder(1, "Книга")
+    val order1 = Order(1)
 
-    val multipleItemsOrder = MultipleItemsOrder(2, listOf("Книга", "Ручка", "Блокнот"))
+    order1.displayOrderInfo("Книга")
 
-    singleItemOrder.displayOrderInfo()
-    multipleItemsOrder.displayOrderInfo()
+    val items = listOf("Книга", "Ручка", "Блокнот")
+    order1.displayOrderInfo(items)
 }
