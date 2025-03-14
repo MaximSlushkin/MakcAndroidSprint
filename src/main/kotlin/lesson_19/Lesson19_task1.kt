@@ -11,7 +11,7 @@ fun main() {
 
     println("Эти виды рыб вы можете добавить в свой аквариум:")
 
-    for (fish in Fish.values()) {
-        println("${fish.nameFish}")
+    for (fish in Fish.entries) {
+        println(fish.nameFish)
     }
 }
