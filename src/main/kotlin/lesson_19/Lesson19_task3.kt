@@ -23,8 +23,9 @@ class Spaceship {
 
     fun shoot() {
         status = SpaceshipStatus.UNDER_FIRE
-        // TODO: Добавить логику выбора вида патронов для стрельбы
+
         println("Космический корабль отстреливается от астероида!")
+
     }
 }
 
