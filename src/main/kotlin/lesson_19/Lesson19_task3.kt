@@ -7,25 +7,16 @@ enum class SpaceshipStatus {
 }
 
 class Spaceship {
-    var status: SpaceshipStatus = SpaceshipStatus.ON_THE_GROUND
 
-    fun takeOff() {
-
-        status = SpaceshipStatus.IN_FLIGHT
-        println("Космический корабль взлетает!")
-    }
+    fun takeOff() {}
 
     fun land() {
-
-        status = SpaceshipStatus.ON_THE_GROUND
-        println("Космический корабль приземляется!")
+        throw NotImplementedError()
     }
 
     fun shoot() {
-        status = SpaceshipStatus.UNDER_FIRE
 
-        println("Космический корабль отстреливается от астероида!")
-
+        // TODO: Добавить логику стрельбы и выбора вида патронов
     }
 }
 
