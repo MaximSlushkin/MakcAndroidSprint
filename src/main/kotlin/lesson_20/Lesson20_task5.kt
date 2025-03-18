@@ -9,7 +9,7 @@ class Robot {
         "Плыли мы по морю, ветер мачту рвал..."
     )
 
-    private var modifier: ((String) -> String)? = null
+    private var modifier: ((String) -> String)? = { it }
     private var currentPhrase: String? = null
 
     fun say() {
