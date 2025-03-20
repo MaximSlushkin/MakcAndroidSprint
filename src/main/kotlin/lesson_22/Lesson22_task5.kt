@@ -24,7 +24,7 @@ fun main() {
     val distanceFromEarth = alphaCentauri.component4()
 
     println("Название: $name")
-    println("Описание: $description")
+    println("Описание места: $description")
     println("Дата и время события: $eventDateTime")
     println("Расстояние от Земли: $distanceFromEarth световых лет")
 }
